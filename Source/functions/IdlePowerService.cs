@@ -27,12 +27,22 @@ namespace RW_Repower.functions
 
         public static void SetAllLoadedBuildingsIdle()
         {
-            foreach (var building in 
-                     Find.Maps.SelectMany(map => 
-                         RePower.Things.SelectMany(buildingDef => 
-                             map.listerBuildings.AllBuildingsColonistOfDef(buildingDef))))
+            var maps = Find.Maps;
+            if (maps == null || RePower.Things == null || RePower.Things.Count == 0)
+                return;
+
+            foreach (var map in maps)
             {
-                SetIdle(building);
+                if (map == null)
+                    continue;
+
+                foreach (var buildingDef in RePower.Things)
+                {
+                    foreach (var building in map.listerBuildings.AllBuildingsColonistOfDef(buildingDef))
+                    {
+                        SetIdle(building);
+                    }
+                }
             }
         }
     }
