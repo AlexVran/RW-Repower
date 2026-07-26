@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RePower_SetIdle_Label>Set idle</RePower_SetIdle_Label>
+  <RePower_SetIdle_Description>Set this building to its idle power draw. It returns to normal power when it is next detected in use.</RePower_SetIdle_Description>
+</LanguageData>

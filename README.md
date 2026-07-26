@@ -17,6 +17,9 @@ Generally speaking, power consumers will use substantially reduced power when no
 
 Buildings should run at 10% power when not in use, unless they have an idlePower setting defined.
 
+When a save finishes loading, supported buildings are restored to their idle power draw. Supported
+buildings also expose a **Set idle** command so their RePower idle state can be applied manually.
+
 You can find this on Steam Workshop: [RW-Repower](https://steamcommunity.com/sharedfiles/filedetails/?id=3528871130)    
 
 

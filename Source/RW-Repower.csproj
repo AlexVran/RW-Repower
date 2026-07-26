@@ -36,8 +36,11 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="functions\IdlePowerService.cs" />
     <Compile Include="functions\Tracker.cs" />
-    <Compile Include="HarmonyPatch.cs" />
+    <Compile Include="Harmony\HarmonyPatch.cs" />
+    <Compile Include="Harmony\LoadedGameIdlePowerPatch.cs" />
+    <Compile Include="UI\IdlePowerCommandPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="functions\RePower.cs" />
     <Compile Include="functions\RePowerDef.cs" />
@@ -50,6 +53,5 @@
       <Version>2.3.6</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
